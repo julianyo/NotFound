@@ -1,95 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
     <link rel="icon" href="devchallenges.png" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
 
     <title>Devchallenges</title>
-
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
 
-      ul {
-        padding-left: 24px;
-      }
+        body{
+            position: relative;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            font-family: 'Space Mono', monospace;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+        }
 
-      li {
-        margin-bottom: 8px;
-      }
+        h1{
+            margin: 0;
+            font-family: Space Mono;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2.3rem;
+            line-height: 50px;
+            letter-spacing: -0.035em;
+        }
 
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+        .brand{
+            font-family: 'Inconsolata', monospace;
+            font-weight: 700;
+        }
 
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
+        .user{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
 
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
+        .user > b{
+            font-weight: 700;
+        }
 
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
+        button{
+            height: 68px;
+            width: 216px;
+            background: none;
+            border: none;
+        }
 
-      .welcome-text a {
-        color: #f7542e;
-      }
+        button.btn{
+            background: #333;
+            color: #fff;
+
+            font-family: Space Mono;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            /* identical to box height */
+
+            letter-spacing: -0.035em;
+            text-transform: uppercase;
+
+            transition: all 0.1s;
+        }
+
+        button.btn:hover{
+            background: #111;
+            transform: translateY(-5px);
+        }
+
+        .flex{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .align-center{
+            align-self: center;
+        }
+
+        .scarecrow{
+            display: block;
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        section{
+            flex: 1;
+            padding: 0 16px;
+        }
+
+        footer{
+            position: relative;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #BDBDBD;
+        }
+
+        .sticky-bottom{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        nav{
+                position: fixed;
+                top: 0;
+                left: 20px;
+            }
+
+        @media screen and (min-width: 426px){
+
+            body{
+                font-size: 24px;
+            }
+
+            h1{
+            margin: 0;
+            font-size: 4rem;
+            line-height: 71px;
+            }
+
+            section{
+                padding: 0;
+                max-width: 50vw;
+                padding: 0 20px;
+            }
+
+            .flex{
+                flex-direction: row;
+            }
+
+            .scarecrow{
+                height: 100%;
+                width: 80%;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+</head>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
-      </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
-  </body>
+<body>
+    <nav>
+        <p class="brand">404 not found</p>
+    </nav>
+    <main class="flex">
+        <section class="align-center">
+              <img class="scarecrow" src="/Scarecrow.png" alt="A Scarecrow">
+        </section>
+      
+        <section class="align-center">
+            <h1>I have bad news for you</h1>
+            <p>The page you are looking for might be removed or is temporarily unavailable</p>
+            <a href=""> <button class="btn">Back to homepage</button> </a>
+        </section>
+    </main>
+    <footer class="sticky-bottom">
+        <p>created by <b>Julianyo</b> - devChallenges.io</p>
+    </footer>
+</body>
 </html>
